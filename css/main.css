@@ -1,0 +1,191 @@
+body, html {
+	min-height: 100%;
+	height: 100%;
+	padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+body {
+	background-image: url("../images/background-blurred.jpg");
+
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;  
+}
+
+.edit {
+    color:cyan;
+}
+
+.projectsGrid {
+    grid-area: projects;
+	justify-self: stretch;
+	align-self: stretch;
+
+    padding-top: 10px;
+    
+    display: grid;
+    grid-template-rows: repeat(auto-fill, 32px);
+    grid-gap: 0.5rem;
+
+    overflow-y: scroll;
+}
+.project {
+    margin: 0 12px;
+    padding: 5px;
+    padding-left: 20px ;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: rgba(225, 225, 225, 1);
+}
+
+.project:hover {
+    background-color: rgba(175, 175, 175, 1);
+    cursor: pointer;
+}
+
+.projectName {
+    display: inline;
+    margin: 0;
+    float:left;
+}
+.projectClass, .projectRisk {
+    display: inline;
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: right;
+}
+.box {
+	position: absolute;
+	
+	left: 35px;
+	right: 35px;
+	top: 30px;
+	bottom: 30px;
+
+	background-image: url(../images/hexes_50.png);
+	background-size: 25%;
+	background-color:rgba(0, 0, 0, 0.5);
+	
+	border: 3px solid rgba(0, 0, 0, 0.5);
+	border-radius: 50px 50px 0 50px;
+
+	display: grid;
+	align-items: stretch;
+	justify-items: stretch;
+	grid-template-columns: 20% auto;
+	grid-template-rows: 7% 9% auto;
+	grid-template-areas: 
+		"title projectHeader"
+		"title projects"
+		"sidebar projects";
+}
+
+.sidebar {
+	grid-area: sidebar;
+	justify-self: stretch;
+	align-self: stretch;
+
+	border: 3px solid black;
+	border-top:0;
+	border-right: 4px solid black;
+	border-radius: 0 0 0 50px;
+	
+	margin: 0 0 -3px -3px;
+
+	background-color: rgba(75, 75, 75, 0.95);
+}
+.sidebarContents {
+	justify-self: center;
+	align-self: center;
+
+    padding-top: 20px;
+
+	text-align: center;
+	color: white;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+  
+.sidebarContents input[type=text] {
+    padding: 6px;
+    padding-right: 0;
+	font-size: 17px;
+    border: none;
+    width: 15vw;
+}
+
+.projectHeader {
+	grid-area: projectHeader;
+	justify-self: stretch;
+	align-self: stretch;
+
+	display: grid;
+
+	border: 3px solid black;
+	border-bottom: 4px solid black;
+	border-left:0;
+	border-radius: 0 50px 0 0;
+	
+	margin: -3px -3px 0 0;
+
+	background-color: rgba(75, 75, 75, 0.95);
+}
+.projectHeaderContents {
+	justify-self: center;
+	align-self: center;
+}
+.projectHeaderContents h3 {
+	margin-block-start: 0.34em;
+	margin-block-end: 0.34em;
+
+	font-size: 2.25vh;
+
+	text-align: center;
+	color: white;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.title {
+	grid-area: title;
+	justify-self: stretch;
+	align-self: stretch;
+
+    white-space: nowrap;
+    overflow: hidden;
+
+	display: grid;
+
+	border: 3px solid black;
+	border-bottom: 4px solid black;
+	border-right: 4px solid black;
+	border-radius: 50px 0 0 0;
+	
+	margin: -3px 0 0 -3px;
+
+	background-color: rgba(75, 75, 75, 0.95);
+	background-image: url(../images/empire.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.titleTextContents {
+	justify-self: center;
+	align-self: center;
+}
+
+.titleTextContents h2, .titleTextContents h3 {
+	margin-block-start: 0.34em;
+	margin-block-end: 0.34em;
+
+
+
+	font-size: 3vh;
+
+	text-align: center;
+	color: white;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
